@@ -1,0 +1,29 @@
+controller_list:
+  - name: ""    
+    action_ns: joint_trajectory_action   
+    type: FollowJointTrajectory     
+    default: true
+    joints:
+      - joint_s
+      - joint_l
+      - joint_e
+      - joint_u
+      - joint_r
+      - joint_b
+      - joint_t
+    constraints:
+    goal_time: &goal_time_constraint 2.0
+    joint_s:
+      goal: &goal_pos_constraint 0.3
+    joint_l:
+      goal: *goal_pos_constraint
+    joint_e:
+      goal: *goal_pos_constraint
+    joint_u:
+      goal: *goal_pos_constraint
+    joint_r:
+      goal: *goal_pos_constraint
+    joint_b:
+      goal: *goal_pos_constraint
+    joint_t:
+      goal: *goal_pos_constraint
